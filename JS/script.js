@@ -88,6 +88,41 @@ document.getElementById('B').addEventListener ("input", function (){
 })
 
 
+document.getElementById('C').addEventListener ("input", function (){
+    
+    var yvalue = document.getElementById('C').value
+    document.getElementsByTagName('svg')[0].style.height = yvalue * 100/2.645833333 + 100 + "px"
+    
+    document.getElementsByTagName('text')[0].setAttribute("y", (yvalue * 100/2.645833333)/2 -40)
+    document.getElementsByTagName('text')[1].setAttribute("y", (yvalue * 100/2.645833333)/2 )
+    document.getElementsByTagName('text')[2].setAttribute("y", (yvalue * 100/2.645833333) + 30 )
+
+    document.getElementsByTagName('polygon')[0].points[0].y = yvalue * 100/2.6458333333
+    document.getElementsByTagName('polygon')[0].points[1].y = yvalue * 100/2.6458333333
+
+    var y1 = document.getElementsByTagName('polygon')[0].points[0].y
+    var y2 = document.getElementsByTagName('polygon')[0].points[1].y
+
+    var B = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2))
+    B = B*2.645833333333/100
+    B = B.toFixed(2)
+
+    var C = Math.sqrt(Math.pow(x3 - x2, 2) + Math.pow(y3 - y2, 2))
+    C = C*2.645833333333/100
+    C = C.toFixed(2)
+
+    var A = Math.sqrt(Math.pow(x3 - x1, 2) + Math.pow(y3 - y1, 2))
+    A = A*2.645833333333/100
+    A = A.toFixed(2)
+
+
+    ele_b.innerText = "B = "  + B
+    ele_c.innerText = "C = "  + C
+    ele_a.innerText = "A = "  + A
+
+})
+
+
 
 
 // var x1 = document.getElementsByTagName('polygon')[0].points[0].x
