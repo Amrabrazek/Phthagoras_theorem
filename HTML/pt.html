@@ -8,15 +8,27 @@
 </head>
 <body >
     <br>
-    <svg width="200" height="200" style="margin-left:50px">
-        <polygon points="0,150 100,150 100,0" stroke="black" stroke-width="1" fill="none"/>
-        <text x="25" y="80">A</text>
-        <text x="110" y="80">B</text>
-        <text x="50" y="170">C</text>
+    
+
+      <span>B</span>
+      <input type="range" min="1" max="10" step="1" value="4" name="Bside" id="B">
+
+      <span>C</span>
+      <input type="range" min="1" max="10" step="1" value="3" name="Cside" id="C">
+      <br>
+      <br>
+      <svg width="200" height="200" style="margin-left:50px">
+        <polygon points="0,150 150,150 150,0" stroke="black" stroke-width="1" fill="red"/>
+        <text x="50" y="60">A</text>
+        <text x="160" y="60">C</text>
+        <text x="70" y="140">B</text>
       </svg>
+        <br>
+
+
       <div>acording to pythagoras theorem</div>
       <br>
-      <math style="margin-left: 50px;">
+      <math style="margin-left: 50px; color:red">
         <mrow>
             <mi>A</mi>
             <mo>=</mo>
@@ -24,7 +36,7 @@
             <msqrt>
                 <msup>
                     <mrow>
-                        <mi>C</mi>
+                        <mi>B</mi>
                     </mrow>
                     <mrow>
                         <mn>2</mn>
@@ -35,7 +47,7 @@
 
                 <msup>
                     <mrow>
-                        <mi>B</mi>
+                        <mi>C</mi>
                     </mrow>
                     <mrow>
                         <mn>2</mn>
@@ -44,6 +56,7 @@
             </msqrt>
         </mrow>
     </math>
+    <br>
 
 <script src="../JS/script.js"></script>
 </body>
